@@ -1,0 +1,45 @@
+model Stack{
+    privatno {
+        var items = [];
+    }
+    javno{
+        funkcija dodaj(element){
+            @items.dodaj(element);
+        }
+
+        funkcija izbaci(){
+            ako(@prazno()){
+                ispis("Stack je prazan");
+                vrati se;
+            }
+            vrati @items.izbaci();
+        }
+
+        funkcija proviri(){
+            ako(@prazno()){
+                ispis("Stack je prazan");
+                vrati se;
+            }
+            vrati @items[@items.duzina - 1];
+        }
+
+        funkcija prazno(){
+            vrati @items.duzina == 0;
+        }
+
+        funkcija ispisiStack(){
+            @items.zaSvakiUnazad(ispis);
+        }
+    }
+    konstruktor(){
+        @items = [];
+    }
+}
+
+funkcija testStack(){
+    var stack = Stack();
+    stack.dodaj(10);
+    stack.dodaj(20);
+    stack.dodaj(30);
+    stack.ispisiStack();
+}

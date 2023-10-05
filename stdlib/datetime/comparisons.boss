@@ -1,0 +1,26 @@
+paket "vrijeme";
+paket "datum";
+paket "datumvrijeme";
+
+var vj = Vrijeme(12, 30, 0);
+var vd = Vrijeme(15, 22, 0);
+
+ispis("12:30", " do ", "15:22", ": ");
+ispis(vj.periodIzmedju(vd));
+
+ispis("*****************************************");
+
+var dj = Datum(11, 10, 2000);
+var dd = Datum(14, 1, 2003);
+
+ispis("11.10.2000", " do ", "14.01.2003", ": ");
+ispis(dj.periodIzmedju(dd));
+
+ispis("*****************************************");
+
+
+var dvj = DatumVrijeme(11, 10, 2000, 12, 30);
+var dvd = DatumVrijeme(14, 1, 2003, 15, 22);
+
+ispis("11.10.2000 12:30", " do ", "14.01.2003 15:22", ": ");
+ispis(dvj.periodIzmedju(dvd));

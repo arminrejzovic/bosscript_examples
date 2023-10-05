@@ -1,0 +1,29 @@
+paket "http";
+paket "JSON";
+
+probaj{
+    var odgovor = zahtjev("https://catfact.ninja/fact");
+    ako(odgovor.status == 200){
+        var msg = odgovor.tijelo;
+        var obj = objekatIzJSON(msg);
+        ispis(obj.fact);
+    }
+}
+spasi{
+    ispis("Došlo je do greške prilikom slanja zahtjeva");
+}
+
+probaj{
+    var headers = {};
+    headers["Content-Type"] = "application/json";
+    var odgovor = zahtjev("https://httpbin.org/post", "POST", headers, JSONTekst({ime: "Mirel", firma: "TELIX"}));
+    ako(odgovor.status == 200){
+        var msg = odgovor.tijelo;
+        var obj = objekatIzJSON(msg);
+        ispis(obj);
+    }
+}
+spasi{
+    ispis(g);
+    ispis("Došlo je do greške prilikom slanja zahtjeva");
+}

@@ -1,0 +1,17 @@
+paket "sistem";
+
+var vrijeme = tempiraj(funkcija(){
+    funkcija fakt(n: broj): broj{
+        ako (n == 0){
+            vrati 1;
+        }
+        inace {
+            vrati n * fakt(n-1);
+        }
+    }
+    fakt(169);
+});
+
+ispis("Execution time: ", vrijeme, "ms");
+
+            

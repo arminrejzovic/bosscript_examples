@@ -1,0 +1,9 @@
+paket "sistem";
+
+var vrijeme = tempiraj(funkcija(){
+    za svako (x od 1 do 1_000_000){
+        x^2;
+    }
+});
+
+ispis("Execution time: ", vrijeme, "ms");

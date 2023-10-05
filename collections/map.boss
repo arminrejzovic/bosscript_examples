@@ -1,0 +1,27 @@
+paket "strukture";
+
+var mapa = Mapa();
+
+mapa.postavi("Tuzla", "TK");
+mapa.postavi("Sarajevo", "KS");
+mapa.postavi("Bihać", "USK");
+mapa.postavi("Srebrenik", "TK");
+mapa.postavi("Zenica", "ZDK");
+
+ispis(mapa.kljucevi());
+ispis(mapa.vrijednosti());
+
+ispis(mapa.sadrziKljuc("Tuzla"), " bi trebalo bit tacno");
+ispis(mapa.sadrziKljuc("Fojnica"), " bi trebalo bit netacno");
+
+ispis(mapa.dobavi("Tuzla"), " bi trebalo bit 'TK'");
+
+mapa.parovi().zaSvaki(funkcija(p){
+    ispis(p.kljuc, " => ", p.vrijednost);
+});
+
+var test = mapa.primijeni(funkcija(k,v){
+    vrati k + v;
+});
+
+ispis(test);

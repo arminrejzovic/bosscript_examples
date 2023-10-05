@@ -1,0 +1,26 @@
+paket "strukture";
+
+var stog = Stog();
+
+stog.dodaj("Mirel");
+stog.dodaj("Samir");
+stog.dodaj("Nedžad");
+
+stog.zaSvaki(ispis);
+
+var prvi = stog.proviri();
+ispis(prvi, " je prvi u stogu");
+
+stog.izbaci();
+
+ispis(stog.proviri(), " je sada prvi");
+
+ispis(stog.sadrzi("Samir"), " bi trebalo biti tacno");
+ispis(stog.sadrzi("Nedžad"), " bi trebalo biti netacno");
+ispis(stog.sadrziSve(["Samir", "Mirel"]), " bi trebalo biti tacno");
+
+stog.isprazni();
+
+ako(stog.jePrazan()){
+    ispis("stog je sada prazan");
+}

@@ -1,0 +1,11 @@
+paket "vrijeme";
+
+var vj = Vrijeme(12, 30, 0);
+var vd = Vrijeme(15, 22, 0);
+
+var x = vd
+    .plusMinuta(16)
+    .plusSati(5)
+    .plusSekundi(45);
+
+ispis(x.sati, ":", x.minute, ":", x.sekunde);

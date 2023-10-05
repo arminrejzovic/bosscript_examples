@@ -1,0 +1,14 @@
+paket "regex";
+
+funkcija reg(){
+    var regex = Regex("\\d+");
+    var text = "lorem 19 ip5um dol0r s1t am3t";
+
+    var matches = regex.pronadjiSve(text);
+
+    matches.zaSvaki(funkcija(m) => ispis(m.vrijednost));
+
+    var t = regex.zamijeni(text, "DIGITS");
+
+    ispis(t);
+}

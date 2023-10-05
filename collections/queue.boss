@@ -1,0 +1,28 @@
+paket "strukture";
+
+var red = Red();
+
+red.dodaj("Mirel");
+red.dodaj("Samir");
+red.dodaj("Nedžad");
+
+red.zaSvaki(ispis);
+
+var prvi = red.proviri();
+ispis(prvi, " je prvi u redu");
+
+red.izbaci();
+
+ispis(red.proviri(), " je sada prvi");
+
+ispis(red.sadrzi("Samir"), " bi trebalo biti tacno");
+ispis(red.sadrzi("Mirel"), " bi trebalo biti netacno");
+ispis(red.sadrziSve(["Samir", "Nedžad"]), " bi trebalo biti tacno");
+
+red.isprazni();
+
+ako(red.jePrazan()){
+    ispis("Red je sada prazan");
+}
+
+

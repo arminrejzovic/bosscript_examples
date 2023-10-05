@@ -1,0 +1,21 @@
+paket "telnet";
+
+var klijent = TelnetKlijent();
+klijent.uspostaviKonekciju("localhost", 23);
+
+var ulaz = klijent.ulazniTok();
+var izlaz = klijent.izlazniTok();
+
+dok(tačno){
+    probaj {
+        izlaz.posalji(unos());
+        izlaz.isprazni();
+
+        var odgovor = ulaz.ucitaj(1024);
+        ispis(odgovor.dekodiraj());
+    }   
+    spasi {
+        ispis(g);
+        prekid;
+    }
+}

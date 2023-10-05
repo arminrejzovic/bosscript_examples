@@ -1,0 +1,11 @@
+paket "socket";
+
+var klijent = KlijentSocket("localhost", 6969);
+var izlaz = klijent.izlazniTok().pisac();
+var ulaz = klijent.ulazniTok().citac();
+
+dok (tačno){
+    izlaz.ispisi(unos());
+    var odgovor = ulaz.ucitajLiniju();
+    ispis(odgovor);
+} 

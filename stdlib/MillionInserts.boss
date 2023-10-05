@@ -1,0 +1,13 @@
+paket "sistem";
+
+var vrijeme = tempiraj(funkcija(){
+    var arr = [];
+
+    za svako (x od 1 do 1_000_000){
+        arr.dodaj(x);
+    }
+});
+
+ispis("Execution time: ", vrijeme, "ms");
+
+

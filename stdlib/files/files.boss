@@ -1,0 +1,26 @@
+paket "IO";
+
+var fajl = Datoteka("test.kt");
+
+ako(!fajl.postoji()){
+    fajl.kreirajDatoteku();
+}
+
+var pisac = fajl.pisac();
+
+pisac.dopisiLiniju("println('Hello from Bosscript')");
+pisac.dopisiLiniju("val lang = 'Bosscript'");
+pisac.dopisiLiniju("val version = 1.0");
+
+pisac.isprazni();
+pisac.zatvori();
+
+var uspjelo = fajl.preimenuj("renamed.kt");
+
+ako(uspjelo){ ispis("Uspjesno preimenovan fajl");}inače{ ispis("ERROR");}
+
+ispis(fajl.apsolutnaAdresa());
+
+pisac.dopisiLiniju("println('after moving')");
+pisac.isprazni();
+

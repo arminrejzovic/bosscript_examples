@@ -1,0 +1,32 @@
+probaj {
+    ispis(z);
+}
+spasi(greška){
+    ispis(greška);
+}
+
+probaj {
+    ispis(o);
+}
+spasi(greška){
+    ispis(greška);
+}
+konačno {
+    ispis("Finally block");
+}
+
+probaj{
+    izazoviGrešku({
+        poruka: "This is a custom exception",
+        mjesto: [19, 5]
+    });
+}
+spasi(g){
+    ispis(g);
+}
+
+paket "regex";
+
+var regex = Regex("[a-zA-Z]{3}");
+var match = regex.pronadji("lorem ipsum dolor sit amet");
+ispis(match);

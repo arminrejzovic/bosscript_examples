@@ -1,0 +1,23 @@
+paket "strukture";
+
+var list = VezanaLista();
+
+list.dodaj(3);
+list.dodaj(1);
+list.dodaj(8);
+list.dodaj(4);
+
+list.zaSvaki(ispis);
+
+ispis(list.sadrzi(1), " bi trebalo bit tacno");
+ispis(list.sadrzi(2), " bi trebalo bit netacno");
+
+ispis(list.indeksi(), " - validni indeksi");
+
+list.izbaciZadnji();
+
+list.zaSvaki(ispis);
+
+list.izbaci();
+
+list.zaSvaki(ispis);

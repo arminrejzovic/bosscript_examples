@@ -1,0 +1,33 @@
+paket "JSON";
+
+model A {
+    privatno {
+        var x;
+        var y;
+    }
+    konstruktor(x: broj, y: broj){
+        @x = x;
+        @y = y;
+    }
+}
+
+model B < A {
+    konstruktor(x: broj, y: broj, z: broj){
+        prototip(x, y);
+        @z = z;
+    }
+}
+
+funkcija modelToObject(instance){
+    var jsonStr = JSONTekst(instance);
+    vrati objekatIzJSON(jsonStr);
+}
+
+var b = B(1,2,3);
+
+var obj = modelToObject(b);
+obj.a = 6969;
+ispis(tipOd(obj));
+ispis(obj);
+ispis(tipOd(b));
+ispis(b);

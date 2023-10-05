@@ -1,0 +1,68 @@
+paket "testovi";
+
+funkcija assertTrue(){
+    var str = "Chigitas";
+    moraBitiTačno(str.sadrzi("C"));
+}
+
+funkcija assertFalse(){
+    var arr = [1,2,3];
+    moraBitiNetačno(arr[0] == 0);
+}
+
+funkcija assertEquals(){
+    var a = "abc";
+    var b = "abc";
+
+    moraBitiJednako(a, b);
+}
+
+funkcija assertArrayEquals(){
+    var a = [1, 2, 3];
+    var b = [1, 2, 3];
+
+    moraBitiJednako(a, b);
+}
+
+funkcija assertNotEquals(){
+    var a = "abc";
+    var b = "cba";
+
+    moraBitiRazličito(a, b);
+}
+
+funkcija assertArrayNotEquals(){
+    var a = [1, 2, 3];
+    var b = [1, 2, 69];
+
+    moraBitiRazličito(a, b);
+}
+
+funkcija assertNull(){
+    var a = nedefinisano;
+    moraBitiNedefinisano(a);
+}
+
+funkcija assertNotNull(){
+    var a = "nedefinisano";
+    neSmijeBitiNedefinisano(a);
+}
+
+funkcija assertThrows(){
+    var fn = funkcija(){
+        var x = {a: 1, b: 2};
+        ispis(x.c);
+    };
+
+    moraIzazvatiGrešku(fn);
+}
+
+assertTrue();
+assertFalse();
+assertEquals();
+assertArrayEquals();
+assertNotEquals();
+assertArrayNotEquals();
+assertNull();
+assertNotNull();
+assertThrows();

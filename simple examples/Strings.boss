@@ -1,0 +1,19 @@
+tip User {
+    name: tekst;
+    age: broj;
+};
+
+tip SuperUser < User {
+    role: tekst;  
+};
+
+var u = User("Armin", 22);
+var su = SuperUser("Armin", 22, "Developer");
+
+
+
+ako (x > 10) {
+    x+=1;
+}
+
+ако (1 мање од 2) {}

@@ -1,0 +1,16 @@
+paket "sistem";
+
+var vrijeme = tempiraj(funkcija(){
+    funkcija fib(n: broj): broj{
+                ako (n <= 1){
+                    vrati n;
+                }
+                inace {
+                    vrati fib(n-1) + fib(n-2);
+                }
+            }
+            
+            fib(30);
+});
+
+ispis("Execution time: ", vrijeme, "ms");

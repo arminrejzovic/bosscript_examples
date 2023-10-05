@@ -1,0 +1,30 @@
+model Car{
+    konstruktor(name: tekst, year: broj){
+        @name = name;
+        @year = year;
+    }
+
+    javno {
+        funkcija drive(direction: tekst){}
+        funkcija park(){}
+    }
+
+    privatno {
+        var lastServiceDate = Datum(1, 6, 2023);
+    }
+}
+
+var audi = Car("Audi A5", 2019);
+var vw = Car("VW Scirocco", 2010);
+
+model ComplexNumber{
+    konstruktor(re: broj, im: broj){
+        @re = re;
+        @im = im;
+    }
+    javno {
+        funkcija plus(other: ComplexNumber): ComplexNumber{
+            vrati ComplexNumber(@re + other.re, @im + other.im);
+        }
+    }
+}
